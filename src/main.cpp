@@ -113,13 +113,13 @@ void generateFileGraphics(QListWidget* list, std::string path){
 
         itemName = entry.path().filename();
         if(entry.is_directory()){
-            itemIcon = "/home/erizo/dev/c++/FileManager/res/directory.png";
+            itemIcon = "../res/directory.png";
         }
         else if(itemName.ends_with("png") || itemName.ends_with("jpg") || itemName.ends_with("jpeg") || itemName.ends_with("webp") || itemName.ends_with("gif")|| itemName.ends_with("webm")){
             itemIcon = entry.path();
         }
         else{
-            itemIcon = "/home/erizo/dev/c++/FileManager/res/file.png";
+            itemIcon = "../res/file.png";
         }
         QIcon icon(QString::fromStdString(itemIcon));
         item = new QListWidgetItem(icon,QString::fromStdString(itemName)); 
